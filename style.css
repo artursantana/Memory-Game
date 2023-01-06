@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    background: #444;
+}
+
+        /* Button Start*/
+
+
+button{
+    
+    border: none;
+    width: 100px;
+    height: 25px;
+}
+
+
+
+
+
+        /* Button Start*/
+
+#cardBoard{
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.MemoryCard{
+    width: calc(25% - 10px);
+    height: 33%;
+    margin: 5px;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: all 0.7s;
+    
+
+   
+}
+
+.MemoryCard:active{
+    transform: scale(0.95);
+}
+
+.MemoryCard.flip{
+    transform: rotateY(180deg);
+}
+
+
+.frontFace,.backFace{
+    width: 100%;
+    height: 100%;    
+    position: absolute;
+    background: #676769;
+    padding: 20px;
+    backface-visibility: hidden;
+}
+
+.frontFace{
+    transform: rotateY(-180deg);
+}
+
